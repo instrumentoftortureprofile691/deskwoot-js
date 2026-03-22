@@ -2,6 +2,10 @@
 
 Official JavaScript/TypeScript client for the [Deskwoot](https://deskwoot.com) API.
 
+**Deskwoot** is an AI-powered customer support platform with a multi-channel inbox (email, live chat, WhatsApp, Telegram, Instagram, Facebook, X, LINE, SMS), AI chatbot, AI copilot, help center, automation engine, and integrations with Shopify, Stripe, WooCommerce, and more. This package is the API client for building custom integrations on top of Deskwoot.
+
+> Not sure what Deskwoot is? Check out [deskwoot.com](https://deskwoot.com) to see the full platform.
+
 ## Install
 
 ```bash
@@ -123,6 +127,12 @@ await client.createWebhook({
   events: ["conversation.created", "message.created"],
 });
 ```
+
+## Links
+
+- [Deskwoot Platform](https://deskwoot.com)
+- [API Documentation](https://deskwoot.com/docs/api)
+- [Sign up free](https://deskwoot.com/signup)
 
 ## License
 
